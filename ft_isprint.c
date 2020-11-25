@@ -6,11 +6,13 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:00:30 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/23 15:01:59 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 14:27:34 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

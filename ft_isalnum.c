@@ -6,11 +6,13 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:11:40 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/23 14:14:18 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 14:27:49 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isanum(char c)
+#include "libft.h"
+
+int	ft_isanum(int c)
 {
 	if ((c >= 'a' && c <= 'z')
 			|| (c >= 'A' && c <= 'B')

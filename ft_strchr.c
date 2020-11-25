@@ -6,13 +6,11 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:56:33 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/23 16:55:21 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 14:27:26 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

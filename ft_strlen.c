@@ -6,13 +6,13 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:16:20 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/23 17:29:50 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 14:48:11 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t i;
 
