@@ -6,7 +6,7 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:32:02 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/25 14:42:34 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 07:58:08 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && i <= n)
