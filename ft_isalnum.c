@@ -6,17 +6,15 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:11:40 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/25 14:27:49 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 10:11:21 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isanum(int c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z')
-			|| (c >= 'A' && c <= 'B')
-			|| (c >= '0' && c <= '9'))
+	if (ft_isdigit(c) != 0 || ft_isalpha(c) != 0)
 		return (1);
 	return (0);
 }
