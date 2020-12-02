@@ -6,7 +6,7 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:56:33 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/26 10:15:37 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 10:19:30 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[i]);
 	}
 	if (str[i] == (char)c)
-			return ((char *)&str[i]);
+		return ((char *)&str[i]);
 	return (NULL);
 }

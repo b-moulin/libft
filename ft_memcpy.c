@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/26 08:41:39 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/12/02 10:28:35 by bmoulin          ###   ########lyon.fr   */
+/*   Created: 2020/11/30 06:55:02 by bmoulin           #+#    #+#             */
+/*   Updated: 2020/12/02 10:08:23 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	char		*dest;
+	const char	*source;
 
-	i = 0;
-	if (!dst || !src)
-		return (0);
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (i < dstsize - 1 && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	dest = dst;
+	source = src;
+	if (!dst && !src)
+		return (NULL);
+	while (n--)
+		dest[n] = source[n];
+	return (dest);
 }

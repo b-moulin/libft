@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/26 08:41:39 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/12/02 10:28:35 by bmoulin          ###   ########lyon.fr   */
+/*   Created: 2020/11/30 07:07:17 by bmoulin           #+#    #+#             */
+/*   Updated: 2020/12/02 10:07:52 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
+	unsigned char		*dest;
+	unsigned const char	*source;
+	size_t				i;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (i < dstsize - 1 && src[i])
+	dest = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	while (source[i] != (unsigned char)c && i < n)
 	{
-		dst[i] = src[i];
+		dest[i] = source[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	if (source[i] == (unsigned char)c)
+		dest[i] = source[i];
+	if (i == n)
+		return (NULL);
+	return (dest + i + 1);
 }

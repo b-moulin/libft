@@ -6,25 +6,18 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:43:01 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/11/26 09:44:39 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 09:26:34 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
-#include "ctype.h"
 
-int	main(void)
+int				main(int argc, const char *argv[])
 {
-	int i;
+	
+		printf("ft_strnstr : %s\n", ft_strnstr("lorem ipsum dolor sit amet", "consectetur", 30));
+		printf("strnstr : %s\n", strnstr("lorem ipsum dolor sit amet", "consectetur", 30));
 
-	i = -1;
-	while (i < 530)
-	{
-		if (!!ft_isalpha(i) != !!isalpha(i))
-		{
-			printf("Failedisalpha : %d %d\n", isalpha(i), i);
-			printf("Failedft_isalpha%d %d\n", ft_isalpha(i), i);
-		}
-		i++;
-	}
 }

@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/26 08:41:39 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/12/02 10:28:35 by bmoulin          ###   ########lyon.fr   */
+/*   Created: 2020/12/02 06:32:35 by bmoulin           #+#    #+#             */
+/*   Updated: 2020/12/02 10:29:15 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	long long	lln;
 
-	i = 0;
-	if (!dst || !src)
-		return (0);
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (i < dstsize - 1 && src[i])
+	lln = n;
+	if (lln < 0)
 	{
-		dst[i] = src[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		lln = -lln;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	if (lln >= 10)
+	{
+		ft_putnbr_fd(lln / 10, fd);
+		ft_putchar_fd(lln % 10 + 48, fd);
+	}
+	else
+	{
+		ft_putchar_fd(lln + 48, fd);
+	}
 }
