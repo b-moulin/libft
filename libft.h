@@ -6,7 +6,7 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:54:18 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/12/02 10:36:41 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 15:18:01 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct	s_list	*next;
+}					t_list;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_isalpha(int c);
@@ -53,5 +59,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+t_list	*ft_lstnew(void *content);
 
 #endif
