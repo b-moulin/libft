@@ -6,7 +6,7 @@
 /*   By: bmoulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 06:33:36 by bmoulin           #+#    #+#             */
-/*   Updated: 2020/12/07 09:24:30 by bmoulin          ###   ########lyon.fr   */
+/*   Updated: 2020/12/07 15:34:49 by bmoulin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	start = dest;
 	dest->content = f(lst->content);
-	while (lst->next)
+	lst = lst->next;
+	while (lst)
 	{
 		if (!(dest->next = malloc(sizeof(t_list))))
 		{
